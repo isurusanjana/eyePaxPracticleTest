@@ -17,13 +17,16 @@
             </tr>
             @foreach ($salesTeam as $teamMember)
             <tr>
-            <td>{{ $teamMember->id }}</td>
-            <td>{{ $teamMember->full_name }}</td>
-            <td>{{ $teamMember->email }}</td>
-            <td>{{ $teamMember->telephone }}</td>
-            <td>{{ $teamMember->current_route   }}</td>
+                <td>{{ $teamMember->id }}</td>
+                <td>{{ $teamMember->full_name }}</td>
+                <td>{{ $teamMember->email }}</td>
+                <td>{{ $teamMember->telephone }}</td>
+                <td>{{ $teamMember->current_route }}</td>
+                <td>View</td>
+                <td>Edit</td>
+                <td>Delete</td>
             </tr>
-        @endforeach
+            @endforeach
         </table>
     </body>
 </html>

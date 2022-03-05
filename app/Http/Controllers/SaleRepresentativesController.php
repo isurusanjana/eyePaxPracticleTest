@@ -14,9 +14,10 @@ class SaleRepresentativesController extends Controller
     public function showTeams() {
         // $salesTeam = new sales_representatives();
         $salesTeam = sales_representatives::where('is_deleted','N')->get();
-        var_dump($salesTeam);die;
+        // var_dump($salesTeam);die;
         return view('salesteam/show_team', ['salesTeam' => $salesTeam]);
     }
+    
     /*
     * @desc : to show the sales representatives list 
     * @path : GET /editteam/{team member id}
@@ -24,6 +25,6 @@ class SaleRepresentativesController extends Controller
     */
     public function editTeamMember($id) {
         $teamMember = sales_representatives::where('id',$id)->get();
-        var_dump($teamMember);die;
+        return view('salesteam/edit_team', ['teamMember' => $teamMember]);
     }
 }
